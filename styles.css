@@ -20,6 +20,14 @@ body {
 .anime{
   animation: heading 1s  forwards;
 }
+@anime{
+  0%{
+    top:-200x;
+  }
+  100%{
+    top:0px;
+  }
+}
 .level-title {
   position: relative;
   line-height: 1.3;
@@ -86,23 +94,21 @@ body {
 
 .red {
   background-color: red;
-  animation: btn 3s forwards;
+  
 }
 
 .green {
   background-color: green;
-  animation: btn 2s forwards;
   
 }
 
 .blue {
   background-color: blue;
-  animation: btn 3s forwards;
+  
 }
 
 .yellow {
   background-color: yellow;
-  animation: btn 2s forwards;
 }
 
 .pressed {
