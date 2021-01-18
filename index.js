@@ -103,8 +103,6 @@ function checker(array1,array2){
     
   }
 
-
-
 // on keyboard press
 function  mainGame() {
 
@@ -126,11 +124,7 @@ function  mainGame() {
     // if(status===true){
     //     mainGame
     // }
-    
-
-
-
-    
+ 
 }
 
 var counter = 1 
@@ -173,7 +167,6 @@ var handler = function(event){
         var status = checker(randomArray,inputArray)
 
         if(!status){
-
             gameOver()
         } 
         if( status ===true &&inputArray.length === randomArray.length){
@@ -184,19 +177,17 @@ var handler = function(event){
 
   function gameOver(){
     // Heading.innerHTML="Game Over"
-    
     document.getElementById('go').classList.remove('hide')
-    var audio = new Audio('sounds/wrong.mp3')   
-    audio.play
+    var audio1 = new Audio('sounds/wrong.mp3')   
+    audio1.play
     document.body.classList.add('Red')
     Heading.innerHTML=``
     setTimeout(() => {    
         Heading.innerHTML=`Press A Key to Start`
         document.body.classList.remove('Red')
         document.getElementById('go').classList.add('hide')
-    }, 500);
+    }, 200);
     document.addEventListener('keypress', eventHandler);
-    
     // rest the game
     gameReset()
   }
@@ -211,7 +202,6 @@ var handler = function(event){
   function gameReset(){
     document.getElementsByClassName('tutorial-btn')[0].innerHTML="Start"
     counter=1
-    
     inputArray = []
     randomArray=[]
     statuss="false"
