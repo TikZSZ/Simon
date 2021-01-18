@@ -45,7 +45,6 @@ function blink1(randomNumber, i) {
 }
 // 2.3 blink 
 function anime(ele) {
-    console.log(ele);
     setTimeout(() => {
         ele.classList.add('fade')
         convertStringToInt(ele.classList[1])
