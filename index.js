@@ -51,7 +51,7 @@ function anime(ele) {
         convertStringToInt(ele.classList[1])
         setTimeout(() => {
             ele.classList.remove('fade')
-        },100);
+        },200);
     }, ss);
     ss = 800 * (count + 1)
 }
