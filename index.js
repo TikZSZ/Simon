@@ -48,11 +48,10 @@ function anime(ele) {
     console.log(ele);
     setTimeout(() => {
         ele.classList.add('fade')
+        convertStringToInt(ele.classList[1])
         setTimeout(() => {
-            var color=ele.classList[1]
-            convertStringToInt(color)
             ele.classList.remove('fade')
-        }, 200);
+        },100);
     }, ss);
     ss = 800 * (count + 1)
 }
