@@ -20,14 +20,6 @@ body {
 .anime{
   animation: heading 1s  forwards;
 }
-@anime{
-  0%{
-    top:-200x;
-  }
-  100%{
-    top:0px;
-  }
-}
 .level-title {
   position: relative;
   line-height: 1.3;
