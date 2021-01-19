@@ -142,12 +142,14 @@ var handler = function (event) {
 }
 // adds button->pressed | converts color-string->to color-number | pushes(colornumber->inputArray)|checks for errors | calls gameProcced if all good
 function mainEvent(event) {
-    if (event.path.length === 7) {
-        event.path[0].classList.add('pressed')
+    console.log("hello");
+    if ((event.target!=event.currentTarget)) {
+        console.log("bye");
+        event.target.classList.add('pressed')
         setTimeout(() => {
-            event.path[0].classList.remove('pressed')
+            event.target.classList.remove('pressed')
         }, 150);
-        inputArray.push(convertStringToInt(event.path[0].classList[1]))
+        inputArray.push(convertStringToInt(event.target.classList[1]))
         var status = checker(randomArray, inputArray)
         if (!status) {
             gameOver()
@@ -157,6 +159,7 @@ function mainEvent(event) {
         }
     }
 }
+
 
 // proceeds game to next level(clears input Array and increse level and blink over random )
 function gameProcced() {
