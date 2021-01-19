@@ -160,7 +160,6 @@ function mainEvent(event) {
     }
 }
 
-
 // proceeds game to next level(clears input Array and increse level and blink over random )
 function gameProcced() {
     counter++
